@@ -1,0 +1,23 @@
+<div class="container">
+    <button (click)=" ajout()">Ajouter </button>
+    <div *ngFor="let inv of invoiceees">
+        <fieldset style="font-weight: bold ;border : 1px solid #000; padding: 10px;" >
+            <legend >Id : {{ inv.id }}</legend>
+            <ul>
+                <li><strong>Price:</strong> {{ inv.discountAmount }}</li>
+                <li><strong>billAmount:</strong> {{ inv.billAmount }}</li>
+                <li><strong>dateBill:</strong> {{ inv.dateBill }}</li>
+                <li><strong>Status:</strong> {{ inv.Status }}</li>
+
+                <button  [routerLink]="['/details', inv.id]">Details</button> 
+              <button (click)=" deleteProduct(inv.id)">supprimer</button>
+                <button (click)="modifyInvoice(inv.id)">modifier</button>
+
+
+
+            </ul>
+        </fieldset>
+       
+    </div>
+    
+</div>

@@ -1,0 +1,62 @@
+<div class="container">
+<form #f="ngForm" (ngSubmit)="add(f)">
+<div class="text-center"> 
+    <div class="mb-3">
+        <label class="form-label"> discountAmount </label>
+        <input class="form-control" [(ngModel)]="invoice.discountAmount"  required #discountAmount="ngModel"  pattern="[0-9]*" name="text" type="text">
+        <div class="alert alert-danger"
+        *ngIf="discountAmount.invalid && (discountAmount.touched || discountAmount.dirty)">
+                <div *ngIf="discountAmount.errors!['required']">discountAmount is required !</div>
+                <div *ngIf="discountAmount.errors!['pattern']">discountAmount is number just  !</div>
+        </div>
+    </div>
+
+    <div class="text-center"> 
+        <div class="mb-3">
+            <label class="form-label"> billAmount </label>
+            <input class="form-control" [(ngModel)]="invoice.billAmount"  required #billAmount="ngModel"  pattern="[0-9]*" name="text" type="text">
+            <div class="alert alert-danger"
+            *ngIf="billAmount.invalid && (billAmount.touched || billAmount.dirty)">
+                    <div *ngIf="billAmount.errors!['required']">billAmount is required !</div>
+                    <div *ngIf="billAmount.errors!['pattern']">billAmountis number just  !</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center"> 
+        <div class="mb-3">
+            <label class="form-label"> dateBill </label>
+            <input class="form-control" [(ngModel)]="invoice.dateBill"  required #dateBill="ngModel"   name="text" type="date">
+            <div class="alert alert-danger"
+            *ngIf="dateBill.invalid && (dateBill.touched || dateBill.dirty)">
+                    <div *ngIf="dateBill.errors!['required']">dateBill is required !</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center"> 
+        <div class="mb-3">
+          <label class="form-label">Status</label>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="statusPaid" [value]="true" [(ngModel)]="invoice.Status" name="status">
+            <label class="form-check-label" for="statusPaid">true</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" id="statusUnpaid" [value]="false" [(ngModel)]="invoice.Status" name="status">
+            <label class="form-check-label" for="statusUnpaid">false</label>
+          </div>
+        </div>
+      </div>
+      
+
+    
+    
+
+  
+
+<button type="submit" class="btn btn-primary"
+[disabled]="f.invalid">Add invoice</button>
+</div>
+
+</form>
+</div>

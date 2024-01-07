@@ -1,0 +1,15 @@
+
+<div class="container">
+    <h2>Product Details</h2>
+    <div *ngIf="invoice">
+        <p><strong>Id:</strong> {{id}}</p>
+
+      <p><strong>discountAmount:</strong> {{ invoice.discountAmount }}</p>
+      <p><strong>billAmount:</strong> {{ invoice.billAmount }}</p>
+      <p><strong>dateBill:</strong> {{ invoice.dateBill }}</p>
+    </div>
+    <div *ngIf="!invoice">
+      <p>No invoice details available.</p>
+    </div>
+  </div>
+  

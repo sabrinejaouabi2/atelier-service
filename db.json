@@ -1,0 +1,43 @@
+{
+  "invoices": [
+    {
+      "id": 2,
+      "discountAmount": 150,
+      "billAmount": 150,
+      "dateBill": "2000-05-25",
+      "Status": true
+    },
+    {
+      "discountAmount": "10",
+      "id": 3
+    },
+    {
+      "Status": "false",
+      "dateBill": "2024-01-21",
+      "billAmount": "111",
+      "discountAmount": "555",
+      "id": 5
+    },
+    {
+      "Status": "false",
+      "dateBill": "2024-01-20",
+      "billAmount": "15",
+      "discountAmount": "20",
+      "id": 6
+    },
+    {
+      "id": 7,
+      "discountAmount": "15",
+      "billAmount": "165",
+      "dateBill": "2024-01-14",
+      "Status": "false"
+    },
+    {
+      "id": 8,
+      "discountAmount": "158",
+      "billAmount": "155",
+      "dateBill": "2024-01-13",
+      "Status": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+<form (ngSubmit)="updateInvoice()">
+    <label for="discountAmount">Discount Amount:</label>
+    <input type="number" id="discountAmount" [(ngModel)]="invoiceToUpdate!.discountAmount" name="discountAmount">
+    <label for="billAmount">billAmount:</label>
+
+    <input type="number" id="billAmount" [(ngModel)]="invoiceToUpdate!.billAmount" name="billAmount">
+
+    <label for="billAmount">dateBill:</label>
+
+    <input type="date" id="dateBill" [(ngModel)]="invoiceToUpdate!.dateBill" name="dateBill">
+
+    <label for="status">Status:</label>
+  <div>
+    <input type="radio" id="Status" [(ngModel)]="invoiceToUpdate!.Status" [value]="true" name="status">
+    <label for="Status">true</label>
+  
+    <input type="radio" id="Status" [(ngModel)]="invoiceToUpdate!.Status" [value]="false" name="status">
+    <label for="Status">false</label>
+  </div>
+  
+    <!-- Ajoutez d'autres champs pour les autres propriétés de la facture -->
+  
+    <button type="submit">Mettre à jour</button>
+  </form>
+  
